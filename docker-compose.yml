@@ -7,7 +7,6 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./docker/telegraf.conf:/etc/telegraf/telegraf.conf
-      - ./plugins/processors/milesight_processor/milesight_processor.conf:/etc/telegraf/milesight_processor.conf
     ports:
       - "8094:8094"
     environment:

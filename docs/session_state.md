@@ -6,7 +6,7 @@ This file is automatically updated by the AI agent at the end of each session an
 
 ## Current Project Status
 - **Phase**: Development & Verification
-- **Focus**: Verifying the `milesight_processor` plugin and the transversal Docker environment.
+- **Focus**: Refactored to `milesight_parser` with MQTT payload split logic, verified integration in Docker.
 
 ---
 
@@ -15,9 +15,9 @@ This file is automatically updated by the AI agent at the end of each session an
 2. [x] Create [session_state.md](file:///home/ccherre/Projects/telegraf_plugins/docs/session_state.md) to serve as a session log.
 3. [x] Create [specs.md](file:///home/ccherre/Projects/telegraf_plugins/docs/specs.md) to define standard architecture/templates for plugins.
 4. [x] Initialize Go module and Telegraf dependency.
-5. [x] Implement the `milesight_processor` plugin (code, main, test, conf).
+5. [x] Implement the `milesight_parser` plugin (code, main, test, conf).
 6. [x] Implement the transversal Docker environment (Dockerfile, docker-compose, telegraf.conf).
-7. [/] Run unit tests and verify integration.
+7. [x] Run unit tests and verify integration.
 
 ---
 
@@ -33,10 +33,9 @@ This file is automatically updated by the AI agent at the end of each session an
 ## Completed Milestones
 - **2026-07-06**: Initialized the repo structure, steering configs, and plugin directories.
 - **2026-07-06**: Fully developed the `milesight_processor` plugin and created the transversal Docker testing environment.
+- **2026-07-10**: Refactored the plugin to `milesight_parser`, implemented dynamic payload splitting into separate metrics using the payload's timestamp, omitted all tags from output, and successfully verified both unit tests and Docker integration.
 
 ---
 
 ## Next Steps / Backlog
-1. Verify unit tests result.
-2. Build the docker image and run telegraf.
-3. Plan and develop the next plugins (Inputs or Outputs) as requested by the user.
+1. Plan and develop the next plugins (Inputs or Outputs) as requested by the user.
